@@ -6,7 +6,7 @@ This is a writeup of the Tomghost room on TryHackMe.com. This room is made to de
 Ghostcat is a serious vulnerability in Tomcat discovered by security researcher of Chaitin Tech. Due to a flaw in the Tomcat AJP protocol, an attacker can read or include any files in the webapp directories of Tomcat. For example, An attacker can read the webapp configuration files or source code. In addition, if the target web application has a file upload function, the attacker may execute malicious code on the target host by exploiting file inclusion through Ghostcat vulnerability. https://www.chaitin.cn/en/ghostcat
 
 
-# Writeup
+# Tomghost Writeup:
 ## H1 Scanning
 - TEXT
 
@@ -20,17 +20,77 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/1%20scanning/3.png)
 
+
 ## H2 Searching
 - TEXT
 
-## H3 Ghostcat Exploitation
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/4.png)
+
 - TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/5.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/6.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/7.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/8.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/9.png)
+
+
+## H3 Ghostcat Exploitation
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/10.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/11.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/12.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/13.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/14.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/15.png)
+
+- TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/16.png)
+
 
 ## H4 Finding user.txt flag
+
 - TEXT
 
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/4%20finding%20user.txt%20flag/17.png)
+
+
 ## H5 Horizontal privilege escalation
+
 - TEXT
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/4%20finding%20user.txt%20flag/17.png)
+
 
 ## H6 Vertical privilege escalation
 - TEXT
