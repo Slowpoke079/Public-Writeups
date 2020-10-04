@@ -8,7 +8,8 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 # Tomghost Writeup:
 ## H1 Scanning
-- Use Masscan to quickly scan for open tcp ports. (Masscan is heavier and less accurate then nmap, but the speed is nice for CTF's and large scale scanning.)
+- Use Masscan to quickly scan for open tcp ports. 
+- (Masscan is heavier and less accurate then nmap, but the speed is nice for CTF's and large scale scanning.)
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/1%20scanning/1.png)
 
