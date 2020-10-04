@@ -1,5 +1,4 @@
-# Tomghost room (TryHackMe.com) writeup
-# [Ghostcat CVE-2020-1938/CNVD-2020-10487]
+# Tomghost room [Ghostcat CVE-2020-1938/CNVD-2020-10487] writeup (TryHackMe.com)
 This is a writeup of the Tomghost room on TryHackMe.com. This room is made to demonstrate the "Ghostcat exploit" and "CVE-2020-1938 bug". The writeup can feel a bit bloated, this is however the result of showing every step I took.
 
 ## Ghostcat? - Here is a quick update:
