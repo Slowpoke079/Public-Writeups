@@ -39,7 +39,7 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/7.png)
 
-- So lets try lookin for exploit code starting at exploit-db.
+- So lets try looking for exploit code starting at exploit-db.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/8.png)
 
@@ -50,31 +50,31 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ## H3 Ghostcat Exploitation
 
-- TEXT
+- Download the raw exploit code with wget.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/10.png)
 
-- TEXT
+- Read the code (to see what it does and to see if wget succeeded).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/11.png)
 
-- TEXT
+- It looked like python code so lets rename the file to 48143.py
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/12.png)
 
-- TEXT
+- Run the exploit with python.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/13.png)
 
-- TEXT
+- Oops, add the needed arguments. Target the AJP port, not the Tomcat Apache port itself!
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/14.png)
 
-- TEXT
+- By reading a configuration file we could find hardcoded user credentials.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/15.png)
 
-- TEXT
+- We discovered SSH port 22 to be open with masscan, lets try to log in with our credentials.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/16.png)
 
