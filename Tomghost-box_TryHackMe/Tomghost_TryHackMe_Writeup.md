@@ -198,5 +198,3 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 - Ghostcat exploit code Exploit-DB: https://www.exploit-db.com/exploits/48143
 - GTFOBins zip privilege escalation: https://gtfobins.github.io/gtfobins/zip/
 - Google (lol): https://www.google.com/
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/cat_picture0.png)
