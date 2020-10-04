@@ -81,62 +81,58 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ## H4 Finding user.txt flag
 
-- TEXT
+- Lets do a "find" to search for the user.txt file. This is our first flag (we need two).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/4%20finding%20user.txt%20flag/17.png)
 
 
 ## H5 Horizontal privilege escalation
 
-- TEXT
+- We cannot use sudo. Here you can see two examples of trying to use sudo, but note that sudo -l does not trigger "a logging warning".
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/18.png)
 
-- TEXT
+- Credential.pgp and tryhackme.asc look quite out of place. They are probably setup for this CTF as a privilege escalation.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/19.png)
 
-- TEXT
+- Download the files to our kali machine
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/20.png)
 
-- TEXT
+- Turn the .asc into a crackable hash with John for John (tool).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/21.png)
 
-- TEXT
+- Search for the most widely used wordlist in CTF's.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/22.png)
 
-- TEXT
+- Crack the hash with john.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/23.png)
 
-- TEXT
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/23.png)
-
-- TEXT
+- Show the cracked password.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/24.png)
 
-- TEXT
+- Import the cracked .asc
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/25.png)
 
-- TEXT
+- Fill in the password
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/26.png)
 
-- TEXT
+- Import the gpg key (in .asc form).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/27.png)
 
-- TEXT
+- Decrypt our credential.pgp private key with our imported .asc key.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/28.png)
 
-- TEXT
+- Now back on the hacked tomcat server we can switch our suser to merlin with the previously found credentials.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/29.png)
 
