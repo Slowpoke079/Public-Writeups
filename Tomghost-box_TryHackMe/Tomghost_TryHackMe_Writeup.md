@@ -2,13 +2,13 @@
 This is a writeup of the Tomghost room on TryHackMe.com. This room is made to demonstrate the "Ghostcat exploit" and "CVE-2020-1938 bug". The writeup can feel a bit bloated, this is however the result of showing every step I took.
 
 ## Ghostcat? - Here is a quick update:
-Ghostcat is a serious vulnerability in Tomcat discovered by security researcher of Chaitin Tech. Due to a flaw in the Tomcat AJP protocol, an attacker can read or include any files in the webapp directories of Tomcat. For example, An attacker can read the webapp configuration files or source code. In addition, if the target web application has a file upload function, the attacker may execute malicious code on the target host by exploiting file inclusion through Ghostcat vulnerability. https://www.chaitin.cn/en/ghostcat
+Ghostcat is a serious vulnerability in Tomcat discovered by security researcher of Chaitin Tech. Due to a flaw in the Tomcat AJP protocol, an attacker can read or include any files in the webapp directories of Tomcat. For example, an attacker can read the webapp configuration files or source code. In addition, if the target web application has a file upload function, the attacker may execute malicious code on the target host by exploiting file inclusion through Ghostcat vulnerability. https://www.chaitin.cn/en/ghostcat
 
 
 # Tomghost Writeup:
 ## H1 Scanning
 - Use Masscan to quickly scan for open tcp ports. 
-- (Masscan is heavier and less accurate then nmap, but the speed is nice for CTF's and large scale scanning.)
+- (Masscan is heavier and less accurate then nmap, but the speed is nice for CTF's and large-scale scanning.)
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/1%20scanning/1.png)
 
@@ -26,20 +26,20 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/5.png)
 
-- Chaitin, a chinese security company, has created the Ghostcat exploit and found the "CVE-2020-1938" bug. They also created a writeup website for it.
+- Chaitin, a Chinese security company, has created the Ghostcat exploit and found the "CVE-2020-1938" bug. They also created a writeup website for it.
 - (No worries, you can find all found links at the end of this writeup)
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/4.png)
 
-- This all sounds pretty straight forward
+- This all sounds straight forward
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/6.png)
 
-- They created their own scanner tool for the Ghostcat bug! I could not install and make use of the tool since everything was in chinese and google translate didn't help much.
+- They created their own scanner tool for the Ghostcat bug! I could not install and make use of the tool since everything was in Chinese and google translate didn't help much.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/7.png)
 
-- So lets try looking for exploit code starting at exploit-db.
+- So, lets try looking for exploit code starting at exploit-db.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/8.png)
 
@@ -58,7 +58,7 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/11.png)
 
-- It looked like python code so lets rename the file to 48143.py
+- It looked like python code so let's rename the file to 48143.py
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/3%20ghostcat%20exploit/12.png)
 
@@ -81,14 +81,14 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ## H4 Finding user.txt flag
 
-- Lets do a "find" to search for the user.txt file. This is our first flag (we need two).
+- Let's do a "find" to search for the user.txt file. This is our first flag (we need two).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/4%20finding%20user.txt%20flag/17.png)
 
 
 ## H5 Horizontal privilege escalation
 
-- We cannot use sudo. Here you can see two examples of trying to use sudo, but note that sudo -l does not trigger "a logging warning".
+- We cannot use sudo. Here you can see two examples of trying to use sudo but note that sudo -l does not trigger "a logging warning".
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/18.png)
 
@@ -100,7 +100,7 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/20.png)
 
-- Turn the .asc into a crackable hash with John for John (tool).
+- Turn the .asc into a hash with John for John (tool).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/21.png)
 
@@ -138,12 +138,12 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 
 ## H6 Vertical privilege escalation
-- Lets do the sudo -l test one more time to see if we can use sudo with merlin (which would make privilege escalation way easier).
+- Let's do the sudo -l test one more time to see if we can use sudo with merlin (which would make privilege escalation way easier).
 - We can use the sudo command without stating a password if we call the zip binary.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/6%20vertical%20privilege%20escalation/30.png)
 
-- Searching for sudo + zip privelege escalation
+- Searching for sudo + zip privilege escalation
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/6%20vertical%20privilege%20escalation/31.png)
 
@@ -158,16 +158,16 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 
 ## H7 Finding root.txt flag
-- Lets search for the root.txt flag file.
+- Let's search for the root.txt flag file.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/7%20finding%20root.txt%20flag/34.png)
 
 
 ## H8 Mitigation
-- If your tomcat apache server is using the AJP connector and contains the same or an older version then the ones specified you should patch your tomcat.
+- If your tomcat apache server is using the AJP connector and contains the same or an older version, then the ones specified you should patch your tomcat.
 - Update your apache tomcat to the latest version is the best practice mitigation. If this is not possible however you can:
 - Set AJP to listen to your local ip address 127.0.0.1 only.
-- You can also include a "secret" in your AJP connections to patch this vulnerabillity. This secret should be strong and now set to something easily cracked.
+- You can also include a "secret" in your AJP connections to patch this vulnerability. This secret should be strong and now set to something easily cracked.
 - Or disable the AJP adapter (this can possibly create a performance downgrade).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/8%20mitigation/1.PNG)
@@ -182,7 +182,7 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/9%20other/36%20extra%202.png)
 
-- In the CNVD (Chinese National Vulnerability Database) the ghostcat exploit bug (CVE-2020-1938) is known as (CNVD-2020-10478).
+- In the CNVD (Chinese National Vulnerability Database) the Ghostcat exploit bug (CVE-2020-1938) is known as (CNVD-2020-10478).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/9%20other/38%20extra%203.png)
 
@@ -193,7 +193,7 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 - TryHackMe.com Tomghost room: https://tryhackme.com/room/tomghost
 - Chaitin Ghostcat exploit Writeup page: https://www.chaitin.cn/en/ghostcat
 - Wikipedia page for CNVDB: https://en.wikipedia.org/wiki/Chinese_National_Vulnerability_Database
-- Chinese National Vulnerabillity Database: https://www.cnvd.org.cn/
+- Chinese National Vulnerability Database: https://www.cnvd.org.cn/
 - AJP Shooter (Ghostcat exploitation tool): https://github.com/00theway/Ghostcat-CNVD-2020-10487
 - Ghostcat exploit code Exploit-DB: https://www.exploit-db.com/exploits/48143
 - GTFOBins zip privilege escalation: https://gtfobins.github.io/gtfobins/zip/
