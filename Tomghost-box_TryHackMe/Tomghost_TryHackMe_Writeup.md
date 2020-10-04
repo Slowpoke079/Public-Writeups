@@ -132,31 +132,33 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/28.png)
 
-- Now back on the hacked tomcat server we can switch our suser to merlin with the previously found credentials.
+- Now back on the hacked tomcat server we can switch our current user to merlin with the previously found credentials.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/5%20horizontal%20privilege%20escalation/29.png)
 
 
 ## H6 Vertical privilege escalation
-- TEXT
+- Lets do the sudo -l test one more time to see if we can use sudo with merlin (which would make privilege escalation way easier).
+- We can use the sudo command without stating a password if we call the zip binary.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/6%20vertical%20privilege%20escalation/30.png)
 
-- TEXT
+- Searching for sudo + zip privelege escalation
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/6%20vertical%20privilege%20escalation/31.png)
 
-- TEXT
+- GTFOBins got our back!
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/6%20vertical%20privilege%20escalation/32.png)
 
-- TEXT
+- Run the "manual privilege escalation exploitation" of the sudo + zip binary.
+- We are now root!
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/6%20vertical%20privilege%20escalation/33.png)
 
 
 ## H7 Finding root.txt flag
-- TEXT
+- Lets search for the root.txt flag file.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/7%20finding%20root.txt%20flag/34.png)
 
