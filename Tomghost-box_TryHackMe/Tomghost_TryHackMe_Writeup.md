@@ -9,6 +9,7 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 # Writeup
 ## H1 Scanning
 - TEXT
+
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/1%20scanning/1.png)
 
 - TEXT
