@@ -164,33 +164,27 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 
 ## H8 Mitigation
-- TEXT
+- If your tomcat apache server is using the AJP connector and contains the same or an older version then the ones specified you should patch your tomcat.
+- Update your apache tomcat to the latest version is the best practice mitigation. If this is not possible however you can:
+- Set AJP to listen to your local ip address 127.0.0.1 only.
+- You can also include a "secret" in your AJP connections to patch this vulnerabillity. This secret should be strong and now set to something easily cracked.
+- Or disable the AJP adapter (this can possibly create a performance downgrade).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/8%20mitigation/1.PNG)
-
-- TEXT
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/8%20mitigation/2.PNG)
 
 
 ## H9 Other
 - A google search typo led to the finding of AJP Shooter, another Ghostcat exploit (tool).
-- In the CNVD (Chinese National Vulnerability Database) the ghostcat exploit bug (CVE-2020-1938) is known as (CNVD-2020-10478).
-
-- TEXT
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/9%20other/35%20extra%201.png)
 
-
-- TEXT
-
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/9%20other/36%20extra%202.png)
 
-- TEXT
+- In the CNVD (Chinese National Vulnerability Database) the ghostcat exploit bug (CVE-2020-1938) is known as (CNVD-2020-10478).
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/9%20other/38%20extra%203.png)
-
-- TEXT
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/9%20other/39%20extra%204.png)
 
