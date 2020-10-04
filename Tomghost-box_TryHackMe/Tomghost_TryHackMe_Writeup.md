@@ -1,5 +1,4 @@
-
-# Tomghost room, TryHackMe.com [Ghostcat CVE-2020-1938]
+# Tomghost room, TryHackMe.com [Ghostcat CVE-2020-1938/CNVD-2020-10487]
 This is a writeup of the Tomghost room on TryHackMe.com. This room is made to demonstrate the "Ghostcat exploit" and "CVE-2020-1938 bug". The writeup can feel a bit bloated, this is however the result of showing every step I took.
 
 ## Ghostcat? - Here is a quick update:
@@ -23,11 +22,12 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 
 ## H2 Searching
-- TEXT
+- Since the Tomghost room was created to demonstrate the "Ghostcat exploit" we start our searching by googling "Ghostcat".
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/5.png)
 
-- TEXT
+- Chaitin, a chinese security company, has created the Ghostcat exploit and found the "CVE-2020-1938" bug. They also created a writeup website for it.
+- (No worries, you can find all found links at the end of this writeup)
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/4.png)
 
