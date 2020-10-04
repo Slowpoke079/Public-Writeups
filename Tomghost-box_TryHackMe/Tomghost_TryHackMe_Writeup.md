@@ -31,19 +31,19 @@ Ghostcat is a serious vulnerability in Tomcat discovered by security researcher 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/4.png)
 
-- TEXT
+- This all sounds pretty straight forward
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/6.png)
 
-- TEXT
+- They created their own scanner tool for the Ghostcat bug! I could not install and make use of the tool since everything was in chinese and google translate didn't help much.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/7.png)
 
-- TEXT
+- So lets try lookin for exploit code starting at exploit-db.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/8.png)
 
-- TEXT
+- Found exploit code written in python
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Pictures/Ghostcat%20Writeup/2%20searching/9.png)
 
