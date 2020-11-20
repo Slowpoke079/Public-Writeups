@@ -34,16 +34,6 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/7.png)
 
-## text
-- Text. 
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/8.png)
-
-## text
-- Text. 
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/9.png)
-
 ## Blind OS Command Injection
 - We use the " root; " statement to generate a " true " condition in the webapp, so it will execute our command. It checks if the user root exists.
 - We use netcat to push the output to our own machine, we have to do this since the injection is a blind one.
@@ -52,6 +42,10 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/11.png)
 
 - We can do the same with other readable files. 
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/8.png)
+
+- And with other users.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/10.png)
 
