@@ -6,4 +6,4 @@ Personal Writeups of CTF's and other things that i made public.
 - https://github.com/Slowpoke079/Public-Writeups/blob/main/Tomghost-box_TryHackMe/Tomghost_TryHackMe_Writeup.md
 
 ## Injection room, TryHackMe.com [OS Command Injection and Blind OS Command Injection]
-https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Injection_TryHackMe_Writeup.md
+- https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Injection_TryHackMe_Writeup.md
