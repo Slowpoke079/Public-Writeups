@@ -15,6 +15,29 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/3.png)
 
 ## text
+- Ping injection did not work because there was no " true " condition. 
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/6.png)
+
+- Ping injection did not work because there was no " true " condition. We can create a true condition by inputting the username of an existing user combined with " ; ".
+- root exists, so root; = true
+- "ping -c 10 10.9.118.170" = false, and thus ignored
+- "root; ping -c 10 10.9.118.170" = true, and thus executed
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/7.png)
+
+## OS Command Injection
+- Linux Distrobution Enumeration: Since it is not a blind injection we can see the output on our screen/webapp/webpage. 
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/13.png)
+
+- Linux User Shell Environment Enumeration 
+
+![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/12.png)
+
+## Blind OS Command Injection
+
+## text
 - Text. 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/4.png)
@@ -24,17 +47,8 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/5.png)
 
-## text
-- Text. 
 
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/6.png)
 
-## text
-- Text. 
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/7.png)
-
-## Blind OS Command Injection
 - We use the " root; " statement to generate a " true " condition in the webapp, so it will execute our command. It checks if the user root exists.
 - We use netcat to push the output to our own machine, we have to do this since the injection is a blind one.
 - ls -la generates the output (the files in the current directory)
@@ -48,15 +62,6 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 - And with other users.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/10.png)
-
-## OS Command Injection
-- Linux Distrobution Enumeration: Since it is not a blind injection we can see the output on our screen/webapp/webpage. 
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/13.png)
-
-- Linux User Shell Environment Enumeration 
-
-![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/12.png)
 
 ## OS Command Injection - Find the flag!
 - Connect with a reverse bash shell (netcat/nc -e was not working) and use the find query to find the flag file.
