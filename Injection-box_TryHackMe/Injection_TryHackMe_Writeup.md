@@ -1,5 +1,5 @@
 # Injection room [OS Injection basics] writeup (TryHackMe.com)
-This is a simple picture only writeup of the Injection room on TryHackMe.com.
+This is a quick writeup of the Injection room on TryHackMe.com. Regarding OS Command Injection and Blind OS Command Injection.
 
 ## OS Command injection ping
 - Use this command to ping yourself from the webserver/webapp 10 times.
