@@ -6,7 +6,8 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/1.png)
 
-- The page trows an error, you do not know if the injection worked. 
+- The page trows an error, you do not know if the injection worked.
+- What we do know however, is that the webapp did not handle the input correctly. Normally a webapp would return a "no results are found for your search "carrot"" kind of reply. Instead the webapp didn't know how to handle this and "trew an error". This could in turn be an indicator for command injection.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/2.png)
 
