@@ -1,7 +1,7 @@
 # Injection room [OS Injection basics] writeup (TryHackMe.com)
 This is a simple picture only writeup of the Injection room on TryHackMe.com.
 
-## (semi) Blind OS Command injection ping
+## OS Command injection ping
 - Use this command to ping yourself from the webserver/webapp 10 times.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/1.png)
