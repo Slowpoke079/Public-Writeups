@@ -14,19 +14,19 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/3.png)
 
-## text
 - Ping injection did not work because there was no " true " condition. 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/6.png)
 
-- Ping injection did not work because there was no " true " condition. We can create a true condition by inputting the username of an existing user combined with " ; ".
-- root exists, so root; = true
+- Ping injection did not work because there was no " true " condition. We can create a true condition by inputting a findable product/object in the search bar/command. In this case the username of an existing user combined with " ; " will do.
+- root exists, so root; = true (If you could return/find a product with the search term carrot. You could try and use carrot; to try and create a true statement)
 - "ping -c 10 10.9.118.170" = false, and thus ignored
 - "root; ping -c 10 10.9.118.170" = true, and thus executed
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/7.png)
 
-## OS Command Injection
+## OS Command Injection without "true" statement
+- In a lot of webapps it's also possible to do a OS Command injection without any true statements. This can work for ping also.
 - Linux Distrobution Enumeration: Since it is not a blind injection we can see the output on our screen/webapp/webpage. 
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/13.png)
@@ -36,18 +36,13 @@ This is a simple picture only writeup of the Injection room on TryHackMe.com.
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/12.png)
 
 ## Blind OS Command Injection
-
-## text
-- Text. 
+- We will have to receive packets to see if the Blind OS injection works. So lets open up a port in the firewall "the easy way" with gufw (gufw is the graphical frontend of ufw, which is the cli frontend of the iptables firewall.)
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/4.png)
 
-## text
-- Text. 
+- Lets start a netcat listener on the openend port
 
 ![github-small](https://github.com/Slowpoke079/Public-Writeups/blob/main/Injection-box_TryHackMe/Pictures/5.png)
-
-
 
 - We use the " root; " statement to generate a " true " condition in the webapp, so it will execute our command. It checks if the user root exists.
 - We use netcat to push the output to our own machine, we have to do this since the injection is a blind one.
